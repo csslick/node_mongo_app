@@ -1,0 +1,47 @@
+
+	<%- include('header') -%>
+
+	<section>
+		<h1><%= title %></h1>
+		<form action="/login" method="post">
+			<fieldset>
+				<legend>로그인</legend>
+				<table>
+					<tr>
+						<th><label for="">아이디</label></th>
+						<td><input type="text" name="id"></td>
+					</tr>
+					<tr>
+						<th><label for="">비밀번호</label></th>
+						<td><input type="password" name="pwd"></td>
+					</tr>
+				</table>
+				<input type="submit">
+			</fieldset>	
+		</form>
+		<% if(typeof msg!=='undefined'){ %>
+		<p><%= msg %></p>
+		<% } %>
+	</section>
+
+	<%- include('footer') -%>
+	<script>
+		// var header = document.querySelector('header');
+
+		// header.style.border = '2px solid #666';
+
+		// $('header #rem_account').click(function(e){
+		// 	$.ajax({
+		// 		type: 'POST',
+		// 		url: '/',
+		// 		contentType: "application/json",
+		// 		data: JSON.stringify({id:'id'}),
+		// 		success: function(data){
+		// 			console.log(id, pwd);
+		// 		}
+		// 	});
+		// 	return false;
+		// });
+	</script>
+</body>
+</html>
